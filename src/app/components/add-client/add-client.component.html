@@ -18,7 +18,7 @@
             <div class="form-group">
                 <label for="firstName">First Name</label>
                 <input type="text" class="form-control" name="firstName" #clientFirstName="ngModel" [ngClass]="{'is-invalid':clientFirstName.errors && clientFirstName.touched}"
-                    [(ngModel)]="firstName" minlength="2" required>
+                    [(ngModel)]="client.firstName" minlength="2" required>
 
                 <div [hidden]="!clientFirstName.errors?.required" class="invalid-feedback">
                     First name required
@@ -32,7 +32,7 @@
             <div class="form-group">
                 <label for="lastName">Last Name</label>
                 <input type="text" class="form-control" name="lastName" #clientLastName="ngModel" [ngClass]="{'is-invalid':clientLastName.errors && clientLastName.touched}"
-                    [(ngModel)]="lastName" minlength="2" required>
+                    [(ngModel)]="client.lastName" minlength="2" required>
 
                 <div [hidden]="!clientLastName.errors?.required" class="invalid-feedback">
                     Last name required
@@ -46,7 +46,7 @@
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" class="form-control" name="email" #clientEmail="ngModel" [ngClass]="{'is-invalid':clientEmail.errors && clientEmail.touched}"
-                    [(ngModel)]="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                    [(ngModel)]="client.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
 
                 <div [hidden]="!clientEmail.errors?.required" class="invalid-feedback">
                     Email required
